@@ -27,7 +27,7 @@ export default function Dashboard() {
   const [currentTab, setCurrentTab] = useState<'users' | 'plans' | 'coupons'>('users');
 
   const token = localStorage.getItem('adminToken');
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
   useEffect(() => {
     fetchUsers();

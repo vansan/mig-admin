@@ -18,7 +18,8 @@ export default function Login() {
 
     try {
       // Use standard connection on port 5000 pointing to licensing-backend
-      const res = await axios.post('http://localhost:5000/api/users/login', { username, password });
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+      const res = await axios.post(`${API_URL}/users/login`, { username, password });
       if (res.data.token) {
         localStorage.setItem('adminToken', res.data.token);
         window.location.href = '/'; // hard reload to process auth
