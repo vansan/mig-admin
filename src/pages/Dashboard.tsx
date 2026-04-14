@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { LogOut, Users, PlusCircle, Trash2, ShieldCheck, Mail, Smartphone, Key } from 'lucide-react';
+import { LogOut, Users, PlusCircle, Trash2, Mail, Smartphone, Key } from 'lucide-react';
 import { format } from 'date-fns';
 import PlansModule from './PlansModule';
 import CouponsModule from './CouponsModule';
